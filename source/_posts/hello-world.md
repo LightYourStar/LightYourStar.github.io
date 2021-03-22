@@ -1,19 +1,23 @@
 ---
-title: 赵大傻
+title:  数组中出现次数超过一半的数字
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+## 描述
 
-## Quick Start
+数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。
+你可以假设数组是非空的，并且给定的数组总是存在多数元素
 
-### Create a new post
+### 示例 1：
+
+```bash
+  输入: [1, 2, 3, 2, 2, 2, 5, 4, 2]
+  输出: 2
+
+ ```
+### 限制：
 
 ``` bash
-$ hexo new "My New Post"
+1 <= 数组长度 <= 50000
 ```
-
-{% codeblock %}
-print('Hello World!');
-{% endcodeblock %}
 
 <% for (var link in site.data.menu) { %>
   <a href="<%= site.data.menu[link] %>"> <%= link %> </a>
@@ -27,20 +31,5 @@ More info: [Writing](https://hexo.io/docs/writing.html)
 $ hexo server
 ```
 
-More info: [Server](https://hexo.io/docs/server.html)
+More info: [Server](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/)
 
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
