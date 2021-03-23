@@ -1,6 +1,8 @@
 ---
 title:  数组中出现次数超过一半的数字
 ---
+[leetcode链接](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/)
+
 ## 描述
 
 数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。
@@ -66,5 +68,4 @@ title:  数组中出现次数超过一半的数字
   }
 {% endcodeblock %}
 
-[链接](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/)
 
