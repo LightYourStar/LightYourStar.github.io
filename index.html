@@ -74,7 +74,7 @@
     <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/03/23/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2021-03-23T02:26:23.101Z" itemprop="datePublished">2021-03-23</time>
+  <time class="dt-published" datetime="2021-03-23T02:48:51.020Z" itemprop="datePublished">2021-03-23</time>
 </a>
     
   </div>
@@ -97,12 +97,16 @@
 <h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [1, 2, 3, 2, 2, 2, 5, 4, 2]</span><br><span class="line">输出: 2</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h3 id="限制："><a href="#限制：" class="headerlink" title="限制："></a>限制：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;= 数组长度 &lt;= 50000</span><br></pre></td></tr></table></figure>
 
+<h3 id="解题思路：-C"><a href="#解题思路：-C" class="headerlink" title="解题思路：(C++)"></a>解题思路：(C++)</h3><pre><code>1、用map词典记录数字的数量，当某数字数量超过一半时，则找到该数字
+</code></pre>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> num = nums[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">int</span> size = nums.size();</span><br><span class="line">  <span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; times;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++ )&#123;</span><br><span class="line">      num = nums[i];</span><br><span class="line">      times[num] += <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">if</span>(times[num] &gt; size/<span class="number">2</span>)&#123;</span><br><span class="line">          <span class="keyword">return</span> num;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/">链接</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/23/hello-world/" data-id="ckmlecsx60000zum7fsqa8gts" data-title="数组中出现次数超过一半的数字" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/03/23/hello-world/" data-id="ckmlf5ohf0000zrrm20xt8p77" data-title="数组中出现次数超过一半的数字" class="article-share-link">Share</a>
       
       
       
