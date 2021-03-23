@@ -1,5 +1,5 @@
 ---
-title:  数组中出现次数超过一半的数字
+title:  [数组中出现次数超过一半的数字](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/)
 ---
 ## 描述
 
@@ -19,17 +19,4 @@ title:  数组中出现次数超过一半的数字
 1 <= 数组长度 <= 50000
 ```
 
-<% for (var link in site.data.menu) { %>
-  <a href="<%= site.data.menu[link] %>"> <%= link %> </a>
-<% } %>
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/)
 
