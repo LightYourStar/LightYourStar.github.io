@@ -1,5 +1,5 @@
 ---
-title:  [数组中出现次数超过一半的数字](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/)
+title:  数组中出现次数超过一半的数字
 ---
 ## 描述
 
@@ -19,4 +19,5 @@ title:  [数组中出现次数超过一半的数字](https://leetcode-cn.com/pro
 1 <= 数组长度 <= 50000
 ```
 
+[链接](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/)
 
