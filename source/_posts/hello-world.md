@@ -20,7 +20,7 @@ title:  数组中出现次数超过一半的数字
 ```
 
 ### 解题思路：(C++)
-    1、用map词典记录数字的数量，当某数字数量超过一半时，则找到该数字
+  #### 1、用map词典记录数字的数量，当某数字数量超过一半时，则找到该数字
 {% codeblock lang:Cpp %}
     int majorityElement(vector<int>& nums) {
       int num = nums[0];
@@ -36,6 +36,10 @@ title:  数组中出现次数超过一半的数字
       return num;
     }
 {% endcodeblock %}
-
+  #### 2、对数组排序，因为出现数量大于数组的一半，所以排序后的数组中间位置的数则为该数字
+{% codeblock lang:Cpp %}
+  sort(nums.begin(), nums.end());
+  return nums[nums.size()/2];
+{% endcodeblock %}
 [链接](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/)
 
