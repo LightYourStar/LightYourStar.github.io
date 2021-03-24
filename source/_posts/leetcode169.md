@@ -18,6 +18,7 @@ tags: leetcode
   输出: 2
 
  ```
+ $$\mathrm{e}^{\pi\mathrm{i}} = -1$$
 ### 限制：
 
 ``` bash
