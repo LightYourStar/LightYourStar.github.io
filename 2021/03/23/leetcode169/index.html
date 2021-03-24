@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://lightyourstar.github.io">
   <title>数组中出现次数超过一半的数字 | 猩猩的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="leetcode链接 描述数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。你可以假设数组是非空的，并且给定的数组总是存在多数元素 示例 1：123输入: [1, 2, 3, 2, 2, 2, 5, 4, 2]输出: 2  $$\mathrm{e}^{\pi\mathrm{i}} &#x3D; -1$$ 限制：11 &lt;&#x3D; 数组长度 &lt;&#x3D; 50000  解题思路：(C++)1、用map">
+  <meta name="description" content="leetcode链接 描述数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。你可以假设数组是非空的，并且给定的数组总是存在多数元素 示例 1：123输入: [1, 2, 3, 2, 2, 2, 5, 4, 2]输出: 2   限制：11 &lt;&#x3D; 数组长度 &lt;&#x3D; 50000  解题思路：(C++)1、用map词典记录数字的数量，当某数字数量超过一半时，则找到目标数字，时间和空间">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数组中出现次数超过一半的数字">
 <meta property="og:url" content="https://lightyourstar.github.io/2021/03/23/leetcode169/index.html">
 <meta property="og:site_name" content="猩猩的博客">
-<meta property="og:description" content="leetcode链接 描述数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。你可以假设数组是非空的，并且给定的数组总是存在多数元素 示例 1：123输入: [1, 2, 3, 2, 2, 2, 5, 4, 2]输出: 2  $$\mathrm{e}^{\pi\mathrm{i}} &#x3D; -1$$ 限制：11 &lt;&#x3D; 数组长度 &lt;&#x3D; 50000  解题思路：(C++)1、用map">
+<meta property="og:description" content="leetcode链接 描述数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。你可以假设数组是非空的，并且给定的数组总是存在多数元素 示例 1：123输入: [1, 2, 3, 2, 2, 2, 5, 4, 2]输出: 2   限制：11 &lt;&#x3D; 数组长度 &lt;&#x3D; 50000  解题思路：(C++)1、用map词典记录数字的数量，当某数字数量超过一半时，则找到目标数字，时间和空间">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-23T17:53:09.000Z">
-<meta property="article:modified_time" content="2021-03-24T13:43:53.131Z">
+<meta property="article:modified_time" content="2021-03-24T13:48:32.421Z">
 <meta property="article:author" content="Xingyu Han">
 <meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary">
@@ -178,7 +178,7 @@
         <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/">leetcode链接</a></p>
 <h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。<br>你可以假设数组是非空的，并且给定的数组总是存在多数元素</p>
 <h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [1, 2, 3, 2, 2, 2, 5, 4, 2]</span><br><span class="line">输出: 2</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p> $$\mathrm{e}^{\pi\mathrm{i}} = -1$$</p>
+ <!-- $$\mathrm{e}^{\pi\mathrm{i}} = -1$$ -->
 <h3 id="限制："><a href="#限制：" class="headerlink" title="限制："></a>限制：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;= 数组长度 &lt;= 50000</span><br></pre></td></tr></table></figure>
 
 <h3 id="解题思路：-C"><a href="#解题思路：-C" class="headerlink" title="解题思路：(C++)"></a>解题思路：(C++)</h3><h4 id="1、用map词典记录数字的数量，当某数字数量超过一半时，则找到目标数字，时间和空间复杂度为O-N-。"><a href="#1、用map词典记录数字的数量，当某数字数量超过一半时，则找到目标数字，时间和空间复杂度为O-N-。" class="headerlink" title="1、用map词典记录数字的数量，当某数字数量超过一半时，则找到目标数字，时间和空间复杂度为O(N)。"></a>1、用map词典记录数字的数量，当某数字数量超过一半时，则找到目标数字，时间和空间复杂度为O(N)。</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> num = nums[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">int</span> size = nums.size();</span><br><span class="line">  <span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; times;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++ )&#123;</span><br><span class="line">      num = nums[i];</span><br><span class="line">      times[num] += <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">if</span>(times[num] &gt; size/<span class="number">2</span>)&#123;</span><br><span class="line">          <span class="keyword">return</span> num;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
