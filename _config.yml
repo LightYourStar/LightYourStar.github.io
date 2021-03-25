@@ -8,6 +8,10 @@ subtitle: ''
 description: '游戏前端'
 keywords: "Unity Unreal C++ JS lua C# mysql 开发者 程序员 游戏"
 author: Xingyu Han
+sitemap:
+  path: sitemap.xml
+baidusitemap :
+  path: baidusitemap.xml
 # language: en
 timezone: ''
 email: aa88@88.com
