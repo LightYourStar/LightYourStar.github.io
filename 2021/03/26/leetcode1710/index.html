@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lightyourstar.github.io">
-  <title>Archives | 猩猩的博客</title>
+  <title>卡车上的最大单元数 | 猩猩的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="游戏前端">
-<meta property="og:type" content="website">
-<meta property="og:title" content="猩猩的博客">
-<meta property="og:url" content="https://lightyourstar.github.io/archives/index.html">
+  <meta name="description" content="leetcode链接 描述请你将一些箱子装在 一辆卡车 上。给你一个二维数组 boxTypes ，其中 boxTypes[i] &#x3D; [numberOfBoxesi, numberOfUnitsPerBoxi] ： · numberOfBoxesi 是类型 i 的箱子的数量。 · numberOfUnitsPerBoxi 是类型 i 每个箱子可以装载的单元数量。  整数 truckSize 表示卡车">
+<meta property="og:type" content="article">
+<meta property="og:title" content="卡车上的最大单元数">
+<meta property="og:url" content="https://lightyourstar.github.io/2021/03/26/leetcode1710/index.html">
 <meta property="og:site_name" content="猩猩的博客">
-<meta property="og:description" content="游戏前端">
+<meta property="og:description" content="leetcode链接 描述请你将一些箱子装在 一辆卡车 上。给你一个二维数组 boxTypes ，其中 boxTypes[i] &#x3D; [numberOfBoxesi, numberOfUnitsPerBoxi] ： · numberOfBoxesi 是类型 i 的箱子的数量。 · numberOfUnitsPerBoxi 是类型 i 每个箱子可以装载的单元数量。  整数 truckSize 表示卡车">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-03-26T11:18:02.000Z">
+<meta property="article:modified_time" content="2021-03-26T05:25:07.421Z">
 <meta property="article:author" content="Xingyu Han">
-<meta property="article:tag" content="Unity Unreal C++ JS lua C# mysql 开发者 程序员 游戏">
+<meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="猩猩的博客" type="application/atom+xml">
@@ -153,36 +155,81 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-leetcode1710" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      卡车上的最大单元数
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/26/leetcode1710/" class="archive-article-date">
+
+        
+        <a href="/2021/03/26/leetcode1710/" class="archive-article-date">
   	<time datetime="2021-03-26T11:18:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-26</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/26/leetcode1710/">卡车上的最大单元数</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-units-on-a-truck/submissions/">leetcode链接</a></p>
+<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>请你将一些箱子装在 一辆卡车 上。给你一个二维数组 boxTypes ，其中 boxTypes[i] = [numberOfBoxesi, numberOfUnitsPerBoxi] ：</p>
+<pre><code>· numberOfBoxesi 是类型 i 的箱子的数量。
+· numberOfUnitsPerBoxi 是类型 i 每个箱子可以装载的单元数量。
+</code></pre>
+<p>整数 truckSize 表示卡车上可以装载 箱子 的 最大数量 。只要箱子数量不超过 truckSize ，你就可以选择任意箱子装到卡车上。</p>
+<p>返回卡车可以装载 单元 的 最大 总数。</p>
+<h3 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">输入：boxTypes = [[1,3],[2,2],[3,1]], truckSize = 4</span><br><span class="line">输出：8</span><br><span class="line">解释：箱子的情况如下：</span><br><span class="line">- 1 个第一类的箱子，里面含 3 个单元。</span><br><span class="line">- 2 个第二类的箱子，每个里面含 2 个单元。</span><br><span class="line">- 3 个第三类的箱子，每个里面含 1 个单元。</span><br><span class="line">可以选择第一类和第二类的所有箱子，以及第三类的一个箱子。</span><br><span class="line">单元总数 = (1 * 3) + (2 * 2) + (1 * 1) = 8</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="示例-2："><a href="#示例-2：" class="headerlink" title="示例 2："></a>示例 2：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：boxTypes = [[5,10],[2,5],[4,7],[3,9]], truckSize = 10</span><br><span class="line">输出：91</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h3><p>· 1 &lt;= boxTypes.length &lt;= 1000<br>· 1 &lt;= numberOfBoxesi, numberOfUnitsPerBoxi &lt;= 1000<br>· 1 &lt;= truckSize &lt;= 106</p>
+<h3 id="解题思路：-C"><a href="#解题思路：-C" class="headerlink" title="解题思路：(C++)"></a>解题思路：(C++)</h3><h4 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h4><ul>
+<li>每次将能装载最大单元数量的箱子放到卡车上</li>
+<li>寻找当前剩余能装载最大单元数量的箱子，可以通过排序让箱子按照装载的单元数量从大到小排序</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maximumUnits</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; boxTypes, <span class="keyword">int</span> truckSize)</span> </span>&#123;</span><br><span class="line">    sort(boxTypes.begin(), boxTypes.end(), [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; a, <span class="keyword">const</span> <span class="keyword">auto</span>&amp; b)&#123;<span class="keyword">return</span> a[<span class="number">1</span>] &gt; b[<span class="number">1</span>];&#125;);</span><br><span class="line">    <span class="comment">//使用lambda表达式结合sort进行排序</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> n = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i&lt; boxTypes.size() &amp;&amp; truckSize &gt; <span class="number">0</span>; i++)&#123;</span><br><span class="line">        n = min(truckSize, boxTypes[i][<span class="number">0</span>]);</span><br><span class="line">        truckSize -= n;</span><br><span class="line">        res += n * boxTypes[i][<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/uploads/zhifb.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/uploads/wchat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -194,57 +241,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://lightyourstar.github.io/2021/03/26/leetcode1710/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/23/leetcode169/" class="archive-article-date">
-  	<time datetime="2021-03-23T17:53:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/03/23/leetcode169/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数组中出现次数超过一半的数字</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/23/leetcode169/">数组中出现次数超过一半的数字</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -267,8 +363,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
