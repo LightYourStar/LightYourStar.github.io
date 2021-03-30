@@ -155,6 +155,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-different-between-pointer-and-quote" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/30/different-between-pointer-and-quote/">指针和解引用，引用和取地址的区别</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/30/different-between-pointer-and-quote/" class="archive-article-date">
+  	<time datetime="2021-03-30T10:35:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="指针-：指向对象的地址-取地址-amp-：获取变量在内存中的地址"><a href="#指针-：指向对象的地址-取地址-amp-：获取变量在内存中的地址" class="headerlink" title="指针*：指向对象的地址  取地址&amp;：获取变量在内存中的地址"></a>指针*：指向对象的地址  取地址&amp;：获取变量在内存中的地址</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> *p = &amp;i;</span><br></pre></td></tr></table></figure>
+<p>&amp;i是i在内存中的地址<br>p是指针，p存放变量i的地址</p>
+<h3 id="引用-amp-：别名，只能指向一个对象不可更改"><a href="#引用-amp-：别名，只能指向一个对象不可更改" class="headerlink" title="引用&amp;：别名，只能指向一个对象不可更改"></a>引用&amp;：别名，只能指向一个对象不可更改</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> j = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">int</span> &amp;ref_j = j;</span><br></pre></td></tr></table></figure>
+<p>ref_j 是j的引用，ref_j的值为等于j即20<br>修改j的值ref_j随之改变，修改ref_j的值 j的值也随之改变，引用必须初始化</p>
+<h3 id="解引用-：取指针指向的地址的存储内容"><a href="#解引用-：取指针指向的地址的存储内容" class="headerlink" title="解引用*：取指针指向的地址的存储内容"></a>解引用*：取指针指向的地址的存储内容</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> j = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">int</span> *p = &amp;j; <span class="comment">//p为指针</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; *p &lt;&lt; <span class="built_in">endl</span>; <span class="comment">//输出20</span></span><br></pre></td></tr></table></figure>
+<p><em>p中的</em>为解引用标识符，*p为取p指向的地址&amp;j中存储的值20；</p>
+<p>###小技巧<br>    跟随类型名（int\double…) 后面出现的<em>则是指针，出现在表达式中的</em>为解引用<br>    跟随类型名（int\double…) 后面出现的&amp;则是引用，出现在表达式中的&amp;为取地址<br>    可以把指针、接引用， 引用、取地址理解为不同的标识符</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++ pointer reference</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/30/different-between-pointer-and-quote/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-leetcode1710" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -423,6 +503,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">c++ pointer reference</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
