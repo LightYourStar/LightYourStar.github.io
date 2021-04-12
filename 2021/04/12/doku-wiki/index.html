@@ -6,18 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lightyourstar.github.io">
-  <title>Archives: 2021/3 | XingyuHan&#39;s blog</title>
+  <title>dokuwiki安装流程(不勾选MicroApache的方法) | XingyuHan&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="游戏前端">
-<meta property="og:type" content="website">
-<meta property="og:title" content="XingyuHan&#39;s blog">
-<meta property="og:url" content="https://lightyourstar.github.io/archives/2021/03/index.html">
+  <meta name="description" content="前言最近看到公司的wiki系统就突然想自己搭一下试试，以下是效果展示  dokuwiki下载dokuwiki下载地址: https:&#x2F;&#x2F;download.dokuwiki.org在这里我们不勾选MicroApache(Windows)，因为我们会自己安装php、webserver中间语言部分根据需求勾选右侧插件可按需求勾选选完之后点击上面的Download按钮或者下方的Start Download">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dokuwiki安装流程(不勾选MicroApache的方法)">
+<meta property="og:url" content="https://lightyourstar.github.io/2021/04/12/doku-wiki/index.html">
 <meta property="og:site_name" content="XingyuHan&#39;s blog">
-<meta property="og:description" content="游戏前端">
+<meta property="og:description" content="前言最近看到公司的wiki系统就突然想自己搭一下试试，以下是效果展示  dokuwiki下载dokuwiki下载地址: https:&#x2F;&#x2F;download.dokuwiki.org在这里我们不勾选MicroApache(Windows)，因为我们会自己安装php、webserver中间语言部分根据需求勾选右侧插件可按需求勾选选完之后点击上面的Download按钮或者下方的Start Download">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://lightyourstar.github.io/images/dokuwiki_show.png">
+<meta property="og:image" content="https://lightyourstar.github.io/images/dokuwiki_show2.png">
+<meta property="og:image" content="https://lightyourstar.github.io/images/dokuwiki_install.png">
+<meta property="og:image" content="https://lightyourstar.github.io/images/php_install.png">
+<meta property="og:image" content="https://lightyourstar.github.io/images/phpstudy_install.png">
+<meta property="og:image" content="https://lightyourstar.github.io/images/phpstudy_show.png">
+<meta property="og:image" content="https://lightyourstar.github.io/images/phpstudy_show2.png">
+<meta property="og:image" content="https://lightyourstar.github.io/images/dokuwiki_install2.png">
+<meta property="og:image" content="https://lightyourstar.github.io/images/dokuwiki_install3.png">
+<meta property="og:image" content="https://lightyourstar.github.io/images/dokuwiki_install4.png">
+<meta property="article:published_time" content="2021-04-12T11:32:32.000Z">
+<meta property="article:modified_time" content="2021-04-12T09:39:22.829Z">
 <meta property="article:author" content="Xingyu Han">
-<meta property="article:tag" content="Unity Unreal C++ JS lua C# mysql 开发者 程序员 游戏">
+<meta property="article:tag" content="doku wiki install 安装 维基 杜库">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lightyourstar.github.io/images/dokuwiki_show.png">
   
     <link rel="alternative" href="/atom.xml" title="XingyuHan&#39;s blog" type="application/atom+xml">
   
@@ -153,136 +166,185 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-doku-wiki" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      dokuwiki安装流程(不勾选MicroApache的方法)
+    </h1>
+  
+
+        
+        <a href="/2021/04/12/doku-wiki/" class="archive-article-date">
+  	<time datetime="2021-04-12T11:32:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-12</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>最近看到公司的wiki系统就突然想自己搭一下试试，以下是效果展示</strong></p>
+<p><img src="/images/dokuwiki_show.png"><br><img src="/images/dokuwiki_show2.png"></p>
+<h2 id="dokuwiki下载"><a href="#dokuwiki下载" class="headerlink" title="dokuwiki下载"></a>dokuwiki下载</h2><p><strong>dokuwiki下载地址: <a target="_blank" rel="noopener" href="https://download.dokuwiki.org/">https://download.dokuwiki.org</a></strong><br><strong>在这里我们不勾选MicroApache(Windows)，因为我们会自己安装php、webserver</strong><br><strong>中间语言部分根据需求勾选</strong><br><strong>右侧插件可按需求勾选</strong><br><strong>选完之后点击上面的Download按钮或者下方的Start Download 按钮，压缩包下载下来备用</strong><br><img src="/images/dokuwiki_install.png"></p>
+<h2 id="php下载"><a href="#php下载" class="headerlink" title="php下载"></a>php下载</h2><p><strong>php下载地址: <a target="_blank" rel="noopener" href="https://windows.php.net/download#php-8.0">https://windows.php.net/download#php-8.0</a></strong><br><img src="/images/php_install.png"><br><strong>下载后解压，无需安装</strong></p>
+<h2 id="phpStudy下载"><a href="#phpStudy下载" class="headerlink" title="phpStudy下载"></a>phpStudy下载</h2><p><strong>phpStudy是一个PHP调试环境的程序集成包。该程序包集成最新的Apache+PHP+MySQL+phpMyAdmin+ZendOptimizer，一次性安装，无须配置即可使用</strong><br><strong>这里我下载的是phpStudy v8.1版本, 下载后安装</strong><br><strong>phpstudy下载地址: <a target="_blank" rel="noopener" href="https://www.xp.cn/download.html">https://www.xp.cn/download.html</a></strong><br><img src="/images/phpstudy_install.png"></p>
+<p><strong>WebServer这里选择的是Apache，当然也可以选择其他的</strong><br><img src="/images/phpstudy_show.png"></p>
+<p><strong>双击这条信息，或者点击【管理】-&gt;【打开根目录】，将下载的dokuwiki压缩包解压后放到这里</strong><br><img src="/images/phpstudy_show2.png"></p>
+<p><strong>在浏览器输入localhost:80/dokuwiki/install.php，可进入dokuwiki安装网页，这里我默认用的是80端口，如果需要修改可在【管理】-&gt;【修改】-&gt;【端口】修改</strong><br><strong>在该网页的右上角可以选择语言，左上部分，设置wiki名称，以及超级用户的账号密码，还可以选择ACL政策，注意这里是对wiki的权限设置，下面是证书的选择，笔者目前对这些证书的区别还不是很了解，所以使用默认选择的</strong><br><strong>设置好后，点击【保存】</strong><br><img src="/images/dokuwiki_install2.png"></p>
+<p><strong>这样 DokuWiki就搭建完成了</strong><br><img src="/images/dokuwiki_install3.png"><br><img src="/images/dokuwiki_install4.png"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/uploads/zhifb.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/uploads/wchat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/30/different-between-pointer-and-quote/" class="archive-article-date">
-  	<time datetime="2021-03-30T10:35:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/30/different-between-pointer-and-quote/">指针和解引用，引用和取地址的区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++ pointer reference</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">doku wiki install 安装 维基 杜库</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://lightyourstar.github.io/2021/04/12/doku-wiki/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/26/leetcode1710/" class="archive-article-date">
-  	<time datetime="2021-03-26T11:18:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-26</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/03/30/different-between-pointer-and-quote/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">指针和解引用，引用和取地址的区别</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/26/leetcode1710/">卡车上的最大单元数</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/03/23/leetcode169/" class="archive-article-date">
-  	<time datetime="2021-03-23T17:53:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/03/23/leetcode169/">数组中出现次数超过一半的数字</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -305,8 +367,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

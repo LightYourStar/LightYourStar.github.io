@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lightyourstar.github.io">
-  <title>猩猩的博客</title>
+  <title>XingyuHan&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="游戏前端">
 <meta property="og:type" content="website">
-<meta property="og:title" content="猩猩的博客">
+<meta property="og:title" content="XingyuHan&#39;s blog">
 <meta property="og:url" content="https://lightyourstar.github.io/index.html">
-<meta property="og:site_name" content="猩猩的博客">
+<meta property="og:site_name" content="XingyuHan&#39;s blog">
 <meta property="og:description" content="游戏前端">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Xingyu Han">
 <meta property="article:tag" content="Unity Unreal C++ JS lua C# mysql 开发者 程序员 游戏">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="猩猩的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="XingyuHan&#39;s blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -154,6 +154,88 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-doku-wiki" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/12/doku-wiki/">dokuwiki安装流程(不勾选MicroApache的方法)</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/12/doku-wiki/" class="archive-article-date">
+  	<time datetime="2021-04-12T11:32:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>最近看到公司的wiki系统就突然想自己搭一下试试，以下是效果展示</strong></p>
+<p><img src="/images/dokuwiki_show.png"><br><img src="/images/dokuwiki_show2.png"></p>
+<h2 id="dokuwiki下载"><a href="#dokuwiki下载" class="headerlink" title="dokuwiki下载"></a>dokuwiki下载</h2><p><strong>dokuwiki下载地址: <a target="_blank" rel="noopener" href="https://download.dokuwiki.org/">https://download.dokuwiki.org</a></strong><br><strong>在这里我们不勾选MicroApache(Windows)，因为我们会自己安装php、webserver</strong><br><strong>中间语言部分根据需求勾选</strong><br><strong>右侧插件可按需求勾选</strong><br><strong>选完之后点击上面的Download按钮或者下方的Start Download 按钮，压缩包下载下来备用</strong><br><img src="/images/dokuwiki_install.png"></p>
+<h2 id="php下载"><a href="#php下载" class="headerlink" title="php下载"></a>php下载</h2><p><strong>php下载地址: <a target="_blank" rel="noopener" href="https://windows.php.net/download#php-8.0">https://windows.php.net/download#php-8.0</a></strong><br><img src="/images/php_install.png"><br><strong>下载后解压，无需安装</strong></p>
+<h2 id="phpStudy下载"><a href="#phpStudy下载" class="headerlink" title="phpStudy下载"></a>phpStudy下载</h2><p><strong>phpStudy是一个PHP调试环境的程序集成包。该程序包集成最新的Apache+PHP+MySQL+phpMyAdmin+ZendOptimizer，一次性安装，无须配置即可使用</strong><br><strong>这里我下载的是phpStudy v8.1版本, 下载后安装</strong><br><strong>phpstudy下载地址: <a target="_blank" rel="noopener" href="https://www.xp.cn/download.html">https://www.xp.cn/download.html</a></strong><br><img src="/images/phpstudy_install.png"></p>
+<p><strong>WebServer这里选择的是Apache，当然也可以选择其他的</strong><br><img src="/images/phpstudy_show.png"></p>
+<p><strong>双击这条信息，或者点击【管理】-&gt;【打开根目录】，将下载的dokuwiki压缩包解压后放到这里</strong><br><img src="/images/phpstudy_show2.png"></p>
+<p><strong>在浏览器输入localhost:80/dokuwiki/install.php，可进入dokuwiki安装网页，这里我默认用的是80端口，如果需要修改可在【管理】-&gt;【修改】-&gt;【端口】修改</strong><br><strong>在该网页的右上角可以选择语言，左上部分，设置wiki名称，以及超级用户的账号密码，还可以选择ACL政策，注意这里是对wiki的权限设置，下面是证书的选择，笔者目前对这些证书的区别还不是很了解，所以使用默认选择的</strong><br><strong>设置好后，点击【保存】</strong><br><img src="/images/dokuwiki_install2.png"></p>
+<p><strong>这样 DokuWiki就搭建完成了</strong><br><img src="/images/dokuwiki_install3.png"><br><img src="/images/dokuwiki_install4.png"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">doku wiki install 安装 维基 杜库</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/12/doku-wiki/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-different-between-pointer-and-quote" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -506,6 +588,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">c++ pointer reference</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">doku wiki install 安装 维基 杜库</a>
               </li>
              
               <li class="article-tag-list-item">
