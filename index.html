@@ -400,6 +400,95 @@
 
 
   
+    <article id="post-lua-log" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/26/lua-log/">lua写十六进制数到文件</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/26/lua-log/" class="archive-article-date">
+  	<time datetime="2021-03-26T11:18:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>最近在项目上遇到一个写日志的问题，需求是将0x01作为分隔符，放在各个字段之间，<br>然后发现在lua中直接用</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">local t = &#123;</span><br><span class="line">    &#x27;aaa&#x27;,</span><br><span class="line">    &#x27;bbb&#x27;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>然后通过notepad++打开后期望会显示:aaaSOHbbb（SOH的ASCII值为1）</p>
+<p>直接用table.concat(table, 0x01)是不行的， 这时候的输出结果是</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aaa1bbb</span><br></pre></td></tr></table></figure>
+
+<p>然后再用table.concat(table, ‘0x01’)也是不行的， 这时候的输出结果是</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aaa0x01bbb</span><br></pre></td></tr></table></figure>
+<p>在notepad++中0x01字符串是不会转换成SOH的</p>
+<p>然后在网上查了好久，得到一个答案</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">table.concat(table, <span class="string">&#x27;\001&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>最终用这个生成的日志在notepad++中显示的字符是SOH，满足了需求，然后还发现另外一个方法也是将ASCII码转化为控制字符</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">table.concat(table, <span class="built_in">string</span>.<span class="keyword">char</span>(<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">lua 十六进制 日志 文件 0x01</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/26/lua-log/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-leetcode169" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -590,6 +679,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">lua 十六进制 日志 文件 0x01</a>
               </li>
             
             <div class="clearfix"></div>
