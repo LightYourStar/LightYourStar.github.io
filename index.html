@@ -149,6 +149,83 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ssh-to-virtualbox-ubuntu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/04/20/ssh-to-virtualbox-ubuntu/">ssh to virtualbox ubuntu</a>
+    </h1>
+  
+
+        
+        <a href="/2022/04/20/ssh-to-virtualbox-ubuntu/" class="archive-article-date">
+  	<time datetime="2022-04-20T18:18:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="描述：通过ssh-root连接本地用virtualbox创建的ubuntu虚拟机失败"><a href="#描述：通过ssh-root连接本地用virtualbox创建的ubuntu虚拟机失败" class="headerlink" title="描述：通过ssh root连接本地用virtualbox创建的ubuntu虚拟机失败"></a>描述：通过ssh root连接本地用virtualbox创建的ubuntu虚拟机失败</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh root@10.7.132.xx</span><br><span class="line">root@10.7.132.xx<span class="string">&#x27;s password:</span></span><br><span class="line"><span class="string">Permission denied, please try again.</span></span><br></pre></td></tr></table></figure>
+<h3 id="方案："><a href="#方案：" class="headerlink" title="方案："></a>方案：</h3><p>在virtualbox的ubuntu中（10.7.132.xx的服务器）vim/etc/ssh/sshd_config<br>找到PermitRootLogin without-password 改为 PermitRootLogin yes</p>
+<p>如下图<br><img src="/images/ssh2virtualbox_ubuntu1.png"><br>重启SSH服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service ssh restart</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">virtualbox ubuntu ssh root permission</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/04/20/ssh-to-virtualbox-ubuntu/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-doku-wiki" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -587,7 +664,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 Xingyu Han
+    		&copy; 2022 Xingyu Han
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -683,6 +760,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">lua 十六进制 日志 文件 0x01</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">virtualbox ubuntu ssh root permission</a>
               </li>
             
             <div class="clearfix"></div>
