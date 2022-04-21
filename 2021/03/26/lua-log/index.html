@@ -16,7 +16,7 @@
 <meta property="og:description" content="描述最近在项目上遇到一个写日志的问题，需求是将0x01作为分隔符，放在各个字段之间，然后发现在lua中直接用 12345local t &#x3D; &amp;#123;    &amp;#x27;aaa&amp;#x27;,    &amp;#x27;bbb&amp;#x27;,&amp;#125; 然后通过notepad++打开后期望会显示:aaaSOHbbb（SOH的ASCII值为1） 直接用table.concat(table, 0x01)是不行">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-26T11:18:02.000Z">
-<meta property="article:modified_time" content="2022-04-21T02:53:32.979Z">
+<meta property="article:modified_time" content="2022-04-21T03:00:14.621Z">
 <meta property="article:author" content="Xingyu Han">
 <meta property="article:tag" content="lua 十六进制 日志 文件 0x01">
 <meta name="twitter:card" content="summary">
