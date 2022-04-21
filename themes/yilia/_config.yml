@@ -120,9 +120,8 @@ smart_menu:
   aboutme: '关于我'
 
 friends:
-  友情链接1: http://localhost:4000/
-  友情链接2: http://localhost:4000/
-  友情链接3: http://localhost:4000/
+  奧特甜: https://github.com/aoktian
+  撸鱼黄: https://github.com/luyuhuang
 
 
 aboutme: '一个游戏前端程序员'
