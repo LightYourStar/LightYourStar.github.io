@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lightyourstar.github.io">
-  <title>ssh to virtualbox ubuntu | XingyuHan&#39;s blog</title>
+  <title>publish_new_blog | XingyuHan&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="描述：通过ssh root连接本地用virtualbox创建的ubuntu虚拟机失败123$ ssh root@10.7.132.xxroot@10.7.132.xx&amp;#x27;s password:Permission denied, please try again. 方案：在virtualbox的ubuntu中（10.7.132.xx的服务器）vim&#x2F;etc&#x2F;ssh&#x2F;sshd_config找">
+  <meta name="description" content="在已经配置好git githua hexo travisCI的情况下 发布新的博客创建新的md文件并编辑 123cd D:&#x2F;hexohexo new &quot;yourBlogName&quot;vim source&#x2F;_posts&#x2F;yourBlogName.md  写完后提交到本地仓库 12345git add source&#x2F;_posts&#x2F;yourBlogName.mdgit commit so">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ssh to virtualbox ubuntu">
-<meta property="og:url" content="https://lightyourstar.github.io/2022/04/20/ssh-to-virtualbox-ubuntu/index.html">
+<meta property="og:title" content="publish_new_blog">
+<meta property="og:url" content="https://lightyourstar.github.io/2022/04/21/publish-new-blog/index.html">
 <meta property="og:site_name" content="XingyuHan&#39;s blog">
-<meta property="og:description" content="描述：通过ssh root连接本地用virtualbox创建的ubuntu虚拟机失败123$ ssh root@10.7.132.xxroot@10.7.132.xx&amp;#x27;s password:Permission denied, please try again. 方案：在virtualbox的ubuntu中（10.7.132.xx的服务器）vim&#x2F;etc&#x2F;ssh&#x2F;sshd_config找">
+<meta property="og:description" content="在已经配置好git githua hexo travisCI的情况下 发布新的博客创建新的md文件并编辑 123cd D:&#x2F;hexohexo new &quot;yourBlogName&quot;vim source&#x2F;_posts&#x2F;yourBlogName.md  写完后提交到本地仓库 12345git add source&#x2F;_posts&#x2F;yourBlogName.mdgit commit so">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://lightyourstar.github.io/images/ssh2virtualbox_ubuntu1.png">
-<meta property="article:published_time" content="2022-04-20T18:18:04.000Z">
+<meta property="article:published_time" content="2022-04-21T10:37:30.000Z">
 <meta property="article:modified_time" content="2022-04-21T02:49:17.467Z">
 <meta property="article:author" content="Xingyu Han">
-<meta property="article:tag" content="virtualbox ubuntu ssh root permission">
+<meta property="article:tag" content="hexo git github travisCi">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lightyourstar.github.io/images/ssh2virtualbox_ubuntu1.png">
   
     <link rel="alternative" href="/atom.xml" title="XingyuHan&#39;s blog" type="application/atom+xml">
   
@@ -151,30 +149,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ssh-to-virtualbox-ubuntu" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-publish-new-blog" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      ssh to virtualbox ubuntu
+      publish_new_blog
     </h1>
   
 
         
-        <a href="/2022/04/20/ssh-to-virtualbox-ubuntu/" class="archive-article-date">
-  	<time datetime="2022-04-20T18:18:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-20</time>
+        <a href="/2022/04/21/publish-new-blog/" class="archive-article-date">
+  	<time datetime="2022-04-21T10:37:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-04-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="描述：通过ssh-root连接本地用virtualbox创建的ubuntu虚拟机失败"><a href="#描述：通过ssh-root连接本地用virtualbox创建的ubuntu虚拟机失败" class="headerlink" title="描述：通过ssh root连接本地用virtualbox创建的ubuntu虚拟机失败"></a>描述：通过ssh root连接本地用virtualbox创建的ubuntu虚拟机失败</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh root@10.7.132.xx</span><br><span class="line">root@10.7.132.xx<span class="string">&#x27;s password:</span></span><br><span class="line"><span class="string">Permission denied, please try again.</span></span><br></pre></td></tr></table></figure>
-<h3 id="方案："><a href="#方案：" class="headerlink" title="方案："></a>方案：</h3><p>在virtualbox的ubuntu中（10.7.132.xx的服务器）vim/etc/ssh/sshd_config<br>找到PermitRootLogin without-password 改为 PermitRootLogin yes</p>
-<p>如下图<br><img src="/images/ssh2virtualbox_ubuntu1.png"><br>重启SSH服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service ssh restart</span><br></pre></td></tr></table></figure>
+        <h3 id="在已经配置好git-githua-hexo-travisCI的情况下-发布新的博客"><a href="#在已经配置好git-githua-hexo-travisCI的情况下-发布新的博客" class="headerlink" title="在已经配置好git githua hexo travisCI的情况下 发布新的博客"></a>在已经配置好git githua hexo travisCI的情况下 发布新的博客</h3><p>创建新的md文件并编辑</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> D:/hexo</span><br><span class="line">hexo new <span class="string">&quot;yourBlogName&quot;</span></span><br><span class="line">vim <span class="built_in">source</span>/_posts/yourBlogName.md</span><br></pre></td></tr></table></figure>
+
+<p>写完后提交到本地仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add <span class="built_in">source</span>/_posts/yourBlogName.md</span><br><span class="line">git commit <span class="built_in">source</span>/_posts/yourBlogName.md</span><br><span class="line">或者</span><br><span class="line">git add .</span><br><span class="line">git commit -a</span><br></pre></td></tr></table></figure>
+
+<p>推送到远程仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
 
       
 
@@ -219,7 +221,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">virtualbox ubuntu ssh root permission</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo git github travisCi</a>
         		</li>
       		
 		</ul>
@@ -275,7 +277,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://lightyourstar.github.io/2022/04/20/ssh-to-virtualbox-ubuntu/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://lightyourstar.github.io/2022/04/21/publish-new-blog/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -289,18 +291,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/04/21/publish-new-blog/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          publish_new_blog
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/04/12/doku-wiki/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">dokuwiki安装流程(不勾选MicroApache的方法)</div>
+    <a href="/2022/04/20/ssh-to-virtualbox-ubuntu/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ssh to virtualbox ubuntu</div>
       <i class="icon-circle-right"></i>
     </a>
   
