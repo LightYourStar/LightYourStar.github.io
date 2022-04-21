@@ -1,5 +1,5 @@
 ---
-title: publish_new_blog
+title: 用hexo写一个博客
 date: 2022-04-21 10:37:30
 tags: hexo git github travisCi
 ---

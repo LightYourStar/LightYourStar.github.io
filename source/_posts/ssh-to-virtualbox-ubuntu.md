@@ -1,5 +1,5 @@
 ---
-title: ssh to virtualbox ubuntu
+title: ssh virtualbox的ubuntu失败
 date: 2022-04-20 18:18:04
 tags: virtualbox ubuntu ssh root permission
 ---
