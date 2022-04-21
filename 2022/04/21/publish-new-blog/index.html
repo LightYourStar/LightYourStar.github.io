@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://lightyourstar.github.io">
   <title>publish_new_blog | XingyuHan&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在已经配置好git githua hexo travisCI的情况下 发布新的博客创建新的md文件并编辑 123cd D:&#x2F;hexohexo new &quot;yourBlogName&quot;vim source&#x2F;_posts&#x2F;yourBlogName.md  写完后提交到本地仓库 12345git add source&#x2F;_posts&#x2F;yourBlogName.mdgit commit so">
+  <meta name="description" content="在已经配置好git githua hexo travisCI的情况下 发布新的博客创建新的md文件并编辑 123cd D:&#x2F;hexohexo new &quot;yourBlogName&quot;vim source&#x2F;_posts&#x2F;yourBlogName.md 将创建的文件发布 1hexo generate  写完后提交到本地仓库 123456git add source&#x2F;_posts&#x2F;you">
 <meta property="og:type" content="article">
 <meta property="og:title" content="publish_new_blog">
 <meta property="og:url" content="https://lightyourstar.github.io/2022/04/21/publish-new-blog/index.html">
 <meta property="og:site_name" content="XingyuHan&#39;s blog">
-<meta property="og:description" content="在已经配置好git githua hexo travisCI的情况下 发布新的博客创建新的md文件并编辑 123cd D:&#x2F;hexohexo new &quot;yourBlogName&quot;vim source&#x2F;_posts&#x2F;yourBlogName.md  写完后提交到本地仓库 12345git add source&#x2F;_posts&#x2F;yourBlogName.mdgit commit so">
+<meta property="og:description" content="在已经配置好git githua hexo travisCI的情况下 发布新的博客创建新的md文件并编辑 123cd D:&#x2F;hexohexo new &quot;yourBlogName&quot;vim source&#x2F;_posts&#x2F;yourBlogName.md 将创建的文件发布 1hexo generate  写完后提交到本地仓库 123456git add source&#x2F;_posts&#x2F;you">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-21T10:37:30.000Z">
-<meta property="article:modified_time" content="2022-04-21T02:49:17.467Z">
+<meta property="article:modified_time" content="2022-04-21T02:53:32.979Z">
 <meta property="article:author" content="Xingyu Han">
 <meta property="article:tag" content="hexo git github travisCi">
 <meta name="twitter:card" content="summary">
@@ -171,9 +171,11 @@
       
         <h3 id="在已经配置好git-githua-hexo-travisCI的情况下-发布新的博客"><a href="#在已经配置好git-githua-hexo-travisCI的情况下-发布新的博客" class="headerlink" title="在已经配置好git githua hexo travisCI的情况下 发布新的博客"></a>在已经配置好git githua hexo travisCI的情况下 发布新的博客</h3><p>创建新的md文件并编辑</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> D:/hexo</span><br><span class="line">hexo new <span class="string">&quot;yourBlogName&quot;</span></span><br><span class="line">vim <span class="built_in">source</span>/_posts/yourBlogName.md</span><br></pre></td></tr></table></figure>
+<p>将创建的文件发布</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
 
 <p>写完后提交到本地仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add <span class="built_in">source</span>/_posts/yourBlogName.md</span><br><span class="line">git commit <span class="built_in">source</span>/_posts/yourBlogName.md</span><br><span class="line">或者</span><br><span class="line">git add .</span><br><span class="line">git commit -a</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add <span class="built_in">source</span>/_posts/yourBlogName.md</span><br><span class="line">git commit <span class="built_in">source</span>/_posts/yourBlogName.md</span><br><span class="line">或者</span><br><span class="line">git add .</span><br><span class="line">git commit -a</span><br><span class="line">wq并保存退出</span><br></pre></td></tr></table></figure>
 
 <p>推送到远程仓库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
