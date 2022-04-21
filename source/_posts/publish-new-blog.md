@@ -10,6 +10,10 @@ cd D:/hexo
 hexo new "yourBlogName"
 vim source/_posts/yourBlogName.md
 ```
+将创建的文件发布
+```bash
+hexo generate
+```
 
 写完后提交到本地仓库
 ```bash
@@ -18,6 +22,7 @@ git commit source/_posts/yourBlogName.md
 或者
 git add .
 git commit -a
+wq并保存退出
 ```
 
 推送到远程仓库
